@@ -830,11 +830,16 @@ h3 {
 }
 
 .capability-grid,
+.ichigo-grid,
 .role-grid,
 .award-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+}
+
+.ichigo-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .award-grid {
@@ -843,6 +848,7 @@ h3 {
 }
 
 .capability-card,
+.ichigo-card,
 .award-tile,
 .role-chip {
   border: 1px solid var(--line);
@@ -852,6 +858,7 @@ h3 {
 }
 
 .capability-card:hover,
+.ichigo-card:hover,
 .award-tile:hover,
 .role-chip:hover {
   background: var(--black);
@@ -859,14 +866,37 @@ h3 {
   transform: translateY(-6px);
 }
 
-.capability-card span {
+.capability-card span,
+.ichigo-card span {
   color: var(--pink);
   font-weight: 900;
 }
 
-.capability-card p {
+.capability-card p,
+.ichigo-card p {
   color: var(--muted);
   line-height: 1.65;
+}
+
+.ichigo-fit {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.ichigo-card {
+  min-height: 280px;
+  background:
+    linear-gradient(135deg, rgba(255, 46, 136, 0.09), transparent 42%),
+    var(--white);
+}
+
+.ichigo-card h3 {
+  max-width: 320px;
+  margin-top: 70px;
+}
+
+.ichigo-card:hover p {
+  color: #d7d1ca;
 }
 
 .award-tile {
@@ -1045,6 +1075,7 @@ h3 {
   }
 
   .capability-grid,
+  .ichigo-grid,
   .role-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1143,6 +1174,7 @@ h3 {
   }
 
   .capability-grid,
+  .ichigo-grid,
   .role-grid,
   .award-grid {
     grid-template-columns: 1fr;
